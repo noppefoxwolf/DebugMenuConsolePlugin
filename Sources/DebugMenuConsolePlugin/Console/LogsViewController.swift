@@ -29,19 +29,22 @@ class LogsViewController: UICollectionViewController {
         case logs
     }
     
-    lazy var dataSource = UICollectionViewDiffableDataSource<Section, URL>(collectionView: collectionView) { (collectionView, indexPath, logURL) in
+    lazy var dataSource: UICollectionViewDiffableDataSource<Section, URL> = {
         let cellRegstration = UICollectionView.CellRegistration { (cell: UICollectionViewListCell, indexPath, logURL: URL) in
             var content = cell.defaultContentConfiguration()
             content.text = logURL.lastPathComponent
             cell.contentConfiguration = content
             cell.accessories = [.disclosureIndicator()]
         }
-        return collectionView.dequeueConfiguredReusableCell(
-            using: cellRegstration,
-            for: indexPath,
-            item: logURL
-        )
-    }
+        
+        return UICollectionViewDiffableDataSource<Section, URL>(collectionView: collectionView) { (collectionView, indexPath, logURL) in
+            return collectionView.dequeueConfiguredReusableCell(
+                using: cellRegstration,
+                for: indexPath,
+                item: logURL
+            )
+        }
+    }()
     
     var snapshot = NSDiffableDataSourceSnapshot<Section, URL>()
     

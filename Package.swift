@@ -14,12 +14,11 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/apple/swift-log.git",
-            from: "1.4.1"
+            from: "1.4.2"
         ),
         .package(
             url: "https://github.com/noppefoxwolf/DebugMenu.git",
-//            from: "1.10.0"
-            .branch("release/1.10.0")
+            .upToNextMajor(from: "1.13.0")
         )
     ],
     targets: [
