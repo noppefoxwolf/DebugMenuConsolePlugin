@@ -18,7 +18,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/noppefoxwolf/DebugMenu.git",
-            .upToNextMajor(from: "1.13.0")
+            .upToNextMajor(from: "1.20.0")
         )
     ],
     targets: [

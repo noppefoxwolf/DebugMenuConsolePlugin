@@ -7,9 +7,9 @@
 
 import DebugMenu
 
-public struct ConsoleDebugItem: DebugMenuPresentable {
-    public var debuggerItemTitle: String { "Console" }
-    public let action: DebugMenuAction = .didSelect { (controller, completions) in
+public struct ConsoleDebugItem: DebugItem {
+    public var debugItemTitle: String { "Console" }
+    public let action: DebugItemAction = .didSelect { (controller, completions) in
         let vc = LogsViewController()
         controller.navigationController?.pushViewController(vc, animated: true)
         completions(.success())

@@ -5,9 +5,9 @@
         "package": "DebugMenu",
         "repositoryURL": "https://github.com/noppefoxwolf/DebugMenu.git",
         "state": {
-          "branch": "release/1.10.0",
-          "revision": "63cf9118ac99c85ed70fea14799450f2809c7932",
-          "version": null
+          "branch": null,
+          "revision": "0a3e656d8359b159b178874258437ac637b421b1",
+          "version": "1.20.0"
         }
       },
       {
